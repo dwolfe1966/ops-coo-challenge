@@ -1,0 +1,19 @@
+priority,item_id,workflow,final_tier,owner,sla,action,why
+1,Q-11,Contract-change alert,RED,Executive sponsor + legal/ops,NOW,Pause any contract action; verify term change against source contract; route to executive/legal owner,Legal/financial exposure + current tier clearly unsafe
+2,Q-15,Customer-risk detector,RED,COO + account lead + exec sponsor,NOW,Open retention incident; validate signal; assign senior owner; prep executive outreach decision,Top-3 client + renewal/relationship risk
+3,Q-08,Prospect sourcing,RED,COO + SDR lead + technical partner,NOW,Stop auto-send path; identify recipients; assess/recover bad sends; preserve logs; add name/company validation gate,Observed auto-execution failure with external brand impact
+4,Q-16,Content repurposing,RED,Content lead + client service,NOW,Block send; verify permission/provenance of client performance numbers; redact or source properly,Potential confidential/client-data disclosure
+5,Q-01,Customer-risk detector,YELLOW,Named account owner,<4h,"Validate signal, dedupe with Q-09, define recovery action and next client touch","Enterprise client, 12-day age, renewal in 45 days"
+6,Q-13,Deal revival scan,YELLOW,Sales lead / AE-1,<4h,Reopen item; verify whether outreach actually occurred; repair dashboard completion rule,System says done but CRM has no evidence
+7,Q-04,Deal revival scan,YELLOW,AE-2,Today,Validate LinkedIn signal; send personalized follow-up if still relevant; set next-action date,Time-sensitive commercial opportunity aging 8 days
+8,Q-18,Candidate follow-up,YELLOW,Talent lead,Today,Exclude candidates now at client companies; review remaining 3 for personalized re-engagement,Relationship/conflict context makes auto-send unsafe
+9,Q-17,Prospect sourcing,YELLOW,SDR lead,Today,Dedupe against Q-02; fix batch-generation dedupe before any outreach,9/14 records overlap another batch
+10,Q-02,Prospect sourcing,YELLOW,SDR lead,Today,Operator spot-check company/person fit and dedupe status; then approve qualified records,Potentially valuable but Q-08/Q-17 show sourcing-quality defects
+11,Q-07,Search/content scan,GREEN,SEO lead,Today,Complete in-review decision; require client-active check and prioritized top recommendations only,Owned and already in review; reversible internal recommendation
+12,Q-03,Content repurposing,GREEN,Content lead,<24h,Assign owner; sample-check facts/brand voice; approve or kill stale drafts,"Low-risk internal draft, but ownership missing"
+13,Q-10,Editorial planning,GREEN,Content lead,<24h,Do not execute calendar as-is; map topics to client/company priority or discard,"Not tied to priority; planning output, not urgent action"
+14,Q-12,Competitive monitoring,GREEN,Strategy/marketing lead,Batch weekly,Merge with Q-05 into digest; only escalate material client/revenue implications,High alert volume suggests signal-quality problem
+15,Q-05,Competitive monitoring,GREEN,Strategy/marketing lead,Batch weekly,Merge with Q-12 into digest; no standalone action until impact hypothesis exists,14th similar alert this week
+16,Q-14,Search/content scan,GREEN,SEO lead + technical partner,Kill/close,Close item; add active-client eligibility check upstream,Client already churned; automation state is stale
+17,Q-09,Customer-risk detector,GREEN,Technical partner,Close duplicate,Merge into Q-01; fix duplicate-event key/data-slice logic,Duplicate of Q-01; do not create second operational action
+18,Q-06,Candidate follow-up,GREEN,Talent lead,Close/learn,Close stale task; record service failure; do not re-engage unless specific reason emerges,30-day-old promise; candidate already joined competitor
