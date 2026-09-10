@@ -22,6 +22,15 @@ AI should increase action throughput **without increasing executive review load*
 
 Automation earns autonomy through measured reliability and bounded downside. Executive attention is reserved for high-downside decisions, policy-threshold changes, and material cross-functional tradeoffs.
 
+## Related operating systems
+The architecture in this challenge reflects how I currently build AI-native operating systems. At **[davidwolfe.app](https://davidwolfe.app/)**, examples include:
+
+- **Agent-Managed Acquisition** — signal detection, scoring/prioritization, bounded agent action, operator controls, and outcome measurement.
+- **Retention Risk Command Center** — risk scoring, intervention prioritization, closed-loop action ownership, and measured retention outcomes.
+- **Pricing Experimentation Control Tower** — explicit hypotheses, economic models, experiment controls, decision rules, and observed outcomes.
+
+The recurring pattern is intentional: **signal → scoring/prioritization → bounded agent action → operator control → measured economic outcome**. The objective is not AI automation for its own sake; it is to improve decision quality, throughput, and economics without losing auditability or accountability.
+
 ## Fixture integrity
 Reference fixture: [`fixture_review_queue_snapshot.csv`](fixture_review_queue_snapshot.csv)  
 SHA-256: `2de9268f03c7764bc85d3447336ba211938a3b506933af4ea80844a4a3034c78`
