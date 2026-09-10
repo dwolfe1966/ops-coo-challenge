@@ -3,24 +3,27 @@
 Candidate work product for **Beat Claude / Ops COO 009**  
 Brief version: **2026-07**
 
-This repo is an inspectable operating artifact, not a generic strategy memo. It turns the challenge fixture into:
-1. a ranked 48-hour triage board,
-2. an executable green/yellow/red risk policy,
-3. an automation portfolio audit with explicit merges/kills,
-4. a low-bureaucracy operating cadence,
-5. evidence and AI-usage disclosures.
+This repo is an inspectable operating artifact for the Single Grain COO/GM challenge. It converts the supplied queue fixture into a concrete operating system: triage, risk policy, decision rights, portfolio rationalization, cadence, evidence, and AI-use disclosure.
 
 ## Start here
-- [`triage_board.csv`](triage_board.csv)
-- [`risk_policy.md`](risk_policy.md)
-- [`automation_portfolio.md`](automation_portfolio.md)
-- [`operating_cadence.md`](operating_cadence.md)
-- [`evidence_log.md`](evidence_log.md)
-- [`ai_usage.md`](ai_usage.md)
-- [`submission_draft.md`](submission_draft.md)
+1. [`FINAL_SUBMISSION.md`](FINAL_SUBMISSION.md) — concise written response
+2. [`triage_board.csv`](triage_board.csv) — all 18 queue items ranked, classified, owned, and actioned
+3. [`risk_policy.md`](risk_policy.md) — executable green/yellow/red policy
+4. [`decision_tree.md`](decision_tree.md) — rendered decision flow
+5. [`automation_portfolio.md`](automation_portfolio.md) — KEEP / IMPROVE / MERGE / KILL decisions
+6. [`operating_cadence.md`](operating_cadence.md) — daily / weekly / monthly management cadence
+7. [`evidence_log.md`](evidence_log.md) — proof tiers and source labels
+8. [`ai_usage.md`](ai_usage.md) — AI disclosure and known weak spots
 
-## Fixture
-Local reference copy: `fixture_review_queue_snapshot.csv`  
+## Core operating thesis
+AI should increase action throughput **without increasing executive review load**.
+
+**signal → validation/dedupe → risk tier → owner/action → completion evidence → measured outcome → policy/model update**
+
+Automation earns autonomy through measured reliability and bounded downside. Executive attention is reserved for high-downside decisions, policy-threshold changes, and material cross-functional tradeoffs.
+
+## Fixture integrity
+Reference fixture: [`fixture_review_queue_snapshot.csv`](fixture_review_queue_snapshot.csv)  
 SHA-256: `2de9268f03c7764bc85d3447336ba211938a3b506933af4ea80844a4a3034c78`
 
 Verify from a fresh checkout of the public challenge with:
@@ -28,19 +31,17 @@ Verify from a fresh checkout of the public challenge with:
 shasum -a 256 challenges/ops-coo-009/fixtures/review_queue_snapshot.csv
 ```
 
-## Core operating thesis
-AI should increase action throughput without increasing executive review load.
+## Seeded issues explicitly caught
+Examples include:
+- **Q-08** — auto-send used the wrong company name: automation-control failure, not just copy quality.
+- **Q-09** — duplicate of Q-01: duplicate alerts are not independent evidence.
+- **Q-13** — marked done with no CRM evidence: status is not completion.
+- **Q-14** — recommendations for a churned client: stale entity state invalidates the action.
+- **Q-16** — client performance numbers sourced from a screenshot: provenance/confidentiality risk.
+- **Q-17** — 9 of 14 prospects duplicate another batch: upstream dedupe failure.
+- **Q-18** — two candidates now work at client companies: relationship context must be revalidated before outreach.
 
-**signal → validation/dedupe → risk tier → owner/action → completion evidence → measured outcome → policy/model update**
+## Publication / confidentiality
+This repository should contain only public challenge data, synthetic or anonymized artifacts, and candidate-owned material. No confidential employer or customer data belongs here.
 
-The executive only handles high-downside decisions and changes to policy thresholds.
-
-## Three fixture observations I would not act on at face value
-- **Q-09** duplicates Q-01; two alerts do not mean two customer-risk events.
-- **Q-13** says `done`, but there is no CRM evidence of an email/call; status is not completion evidence.
-- **Q-14** recommends work for a churned client; automation output is invalid if customer state is stale.
-
-Additional planted-risk signals include Q-08, Q-16, Q-17, and Q-18.
-
-## Publication note
-This repo contains only public challenge data, synthetic/anonymized artifacts, and candidate-owned material. Do not commit confidential data from prior employers or clients.
+`submission_draft.md` is retained as working history; `FINAL_SUBMISSION.md` is the current submission version.
