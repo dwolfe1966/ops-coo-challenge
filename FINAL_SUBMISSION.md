@@ -49,6 +49,8 @@ My kill rule is simple: pause or retire workflows when attributable outcome valu
 
 [Observed] At **Propel Media**, I led product, engineering, data science, and analytics for an advertising marketplace processing **>5B impressions/day**. CTR/CVR predictions were translated into expected impression value and real-time bid decisions. [Observed] Advertiser ROAS improved approximately **37%**.
 
+My current work extends the same operating pattern into agentic systems. At **[davidwolfe.app](https://davidwolfe.app/)** I have built working prototypes including **Agent-Managed Acquisition**, **Retention Risk Command Center**, and **Pricing Experimentation Control Tower**. Across them, the recurring architecture is: **signal → scoring/prioritization → bounded agent action → operator control → measured economic outcome**. The point is not “AI automation” by itself; it is a decision system with explicit policies, auditability, and economic feedback.
+
 When I am not the domain expert, I do not rely on an AI judging another AI in the abstract. I define observable decision criteria, provenance requirements, and failure costs; calibrate the grader with domain experts on a sample; measure false positives/negatives and realized outcomes; and reserve human review for uncertain or high-downside cases.
 
 An AI-native COO owns the decision architecture: what machines may propose, what they may execute, what evidence is required, what humans retain, and how outcomes update the policy/model.
